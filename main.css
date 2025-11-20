@@ -38,6 +38,11 @@ html, body {
     cursor:pointer;
 }
 
+#menu a:hover {
+    color: rgb(255, 0, 0);
+    cursor:pointer;
+}
+
 #abstract {
     padding: 40px;
     text-align: justify;
