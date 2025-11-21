@@ -4,42 +4,44 @@
     <meta charset="UTF-8">
     <title>Automata Of War</title>
     <link rel="icon" type="image/x-icon" href="build/web/cell.png">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="cellular_page.css">
 
 </head>
 <body>
-    <p id="author">Sandy Nguyen | <a href="mailto:duydnguyen@umass.edu">Email: duydnguyen@umass.edu</a> | UMass Amherst</p>
+    <p id="author">Duy Nguyen | <a href="mailto:duydnguyen@umass.edu" id="email">Email: duydnguyen@umass.edu</a> | UMass Amherst</p>
     <h1 id="title-head">
         Automata Of War
     </h1>
 
     <div id="menu">
-        <p>Cellular Automata</p>
-        <p>Prerequisites</p>
-        <p>A History Lesson</p>
-        <p>Ruleset & Transition Function</p>
-        <p>Interesting behavior</p>
+        <p><a href="index.html">Home</a></p>
+        <p><a href="">Prerequisites</a></p>
+        <p><a href="">A History Lesson</a></p>
+        <p><a href="">Ruleset & Transition Function</a></p>
+        <p><a href="">Interesting Behaviors</a></p>
         <p><a href="build/web/index.html" target="_blank">Simulation</a></p>
     </div>
 
-    <p id="abstract">
-        In the late 1940s, the concept of cellular automata was devised by John Von Neumann as a model for self-reproducing organisms.
-        Using this concept, in October 1970, mathematician John Horton Conway developed his Game of Life (or Life for short),
-        which debuted as a section in Martin Gardner’s column of Scientific American.
-        The Game of Life is able to display special patterns and behaviors,
-        including classifiable patterns such as “gliders”, “oscillators”, “still-life”,
-        and “spaceships”, which arise from just simple rules that Conway implemented in Life,
-        making the game capable of forming complex scenarios that can arise from a simple initial configuration.
-        This potential for randomness, I believe, can be a perfect base for a warfare simulation,
-        in which cells would take over “unoccupied territory”,
-        form crucial supply lines for their “frontlines” and form skirmishes along the frontlines.
-        <br>
-        <br>
-        I have documented the design of cellular automata that are able to display interesting behavior
-        that simulates warfare. This paper will outline the prerequisites
-        (i.e. the special conditions needed to simulate warfare),
-        as well as document the state set and transition function I devised for
-        the cellular automata, and the interesting behavior that arose from my tests.
-    </p>
+    <div id="ca-grid">
+        <p>
+            Cellular automata are an array of cells, each being in one state out of many possible ones.
+            Every cell in the array evolves along a discrete timeline of "generations." For each generation,
+            what's called a "transition function" decides the cell's next state. The transition function does
+            this by determining the number of neighbors of each cell it affects. It also takes into account
+            the state of those neighbors.
+            <br>
+            Perhaps the most notable example of cellular automata is the Game of Life.
+        </p>
+        <img src="automata.gif" alt="A gif of cellular automata">
+        <p>
+            Cellular automata are an array of cells, each being in one state out of many possible ones.
+            Every cell in the array evolves along a discrete timeline of "generations." For each generation,
+            what's called a "transition function" decides the cell's next state. The transition function does
+            this by determining the number of neighbors of each cell it affects. It also takes into account
+            the state of those neighbors.
+            <br>
+            Perhaps the most notable example of cellular automata is the Game of Life.
+        </p>
+    </div>
 </body>
 </html>

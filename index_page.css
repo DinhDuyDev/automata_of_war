@@ -4,11 +4,20 @@ html, body {
     font-family:'Courier New', Courier, monospace;
 }
 
+#email:hover {
+    color: red;
+}
+
 #author {
     margin: 0;
     padding: 20px;
     text-align: center;
     color: rgb(115, 28, 178);
+}
+
+#summary {
+    margin: 40px;
+    text-align: center;
 }
 
 #title-head {
@@ -44,6 +53,24 @@ html, body {
 }
 
 #abstract {
-    padding: 40px;
+    padding: 20px 40px 0 40px;
     text-align: justify;
+}
+
+#images {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#images figure {
+    width: 25%;
+    height: auto;
+}
+#images img {
+    width: 100%;
+    margin: 20px;
+    border: 2px dashed rgb(115, 28, 178);
+}
+#images figcaption {
+    text-align: center;
 }
