@@ -15,8 +15,9 @@
 
     <div id="menu">
         <p><a href="index.html">Home</a></p>
+        <p><a style="text-decoration: underline;">Cellular Automata</a></p>
+        <p><a href="history.html">A History Lesson</a></p>
         <p><a href="">Prerequisites</a></p>
-        <p><a href="">A History Lesson</a></p>
         <p><a href="">Ruleset & Transition Function</a></p>
         <p><a href="">Interesting Behaviors</a></p>
         <p><a href="build/web/index.html" target="_blank">Simulation</a></p>
@@ -24,24 +25,34 @@
 
     <div id="ca-grid">
         <p>
+            <strong>Definition</strong><br><br>
             Cellular automata are an array of cells, each being in one state out of many possible ones.
             Every cell in the array evolves along a discrete timeline of "generations." For each generation,
             what's called a "transition function" decides the cell's next state. The transition function does
             this by determining the number of neighbors of each cell it affects. It also takes into account
             the state of those neighbors.
             <br>
-            Perhaps the most notable example of cellular automata is the Game of Life.
-        </p>
-        <img src="automata.gif" alt="A gif of cellular automata">
-        <p>
-            Cellular automata are an array of cells, each being in one state out of many possible ones.
-            Every cell in the array evolves along a discrete timeline of "generations." For each generation,
-            what's called a "transition function" decides the cell's next state. The transition function does
-            this by determining the number of neighbors of each cell it affects. It also takes into account
-            the state of those neighbors.
             <br>
-            Perhaps the most notable example of cellular automata is the Game of Life.
+            Perhaps one of the most notable example of cellular automata is the Game of Life. The Game of Life features cellular automata
+            with 2 states: dead and alive (dead cells are black, and living cells are white). The Game of Life also features a simple 
+            transition function, with a set of only 3 conditions: <br><br>
+
+                &emsp;&emsp;Survival: a “live” cell with 2 or 3 neighboring “live” cells will live. <br>
+                &emsp;&emsp;Death: a “live” cell with more than 3 neighboring “live” cells will die. <br>
+                &emsp;&emsp;Birth: a “dead” cell with exactly 3 neighboring “live” cells will be born. <br>
+            <br><br>
+            <strong>Fig. 2.1.</strong> displays an example of Conway's Game of Life. <br><br>
+            The part that helped with this research the most is Von Neumann's Universal Constructor. It features 29 states
+            with a totally different way of defining a neighborhood (the Constructor features a neighborhood named after Von 
+            Neumann himself). My research deals with the traditional 8-cell neighborhood, but I leaned into having more states 
+            for my cellular automata to represent some basic expansion of territory in war.
         </p>
+        <figure>
+            <img src="automata.gif" alt="A gif of cellular automata">
+            <br>
+            <br>
+            <figcaption style="text-align: center;"> Fig. 2.1. Conway's Game of Life </figcaption>
+        </figure>
     </div>
 </body>
 </html>

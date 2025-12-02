@@ -54,10 +54,12 @@ html, body {
     grid-template-rows: auto auto;
     column-gap: 20px;;
     padding: 40px;
-    background-color: aliceblue;
 }
 
-#ca-grid > * {
+#ca-grid img {
     width: 100%;
     border: 2px dashed rgb(115, 28, 178);
+}
+#ca-grid > * {
+    padding: 20px;
 }

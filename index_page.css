@@ -55,6 +55,7 @@ html, body {
 #abstract {
     padding: 20px 40px 0 40px;
     text-align: justify;
+    margin: 40px;
 }
 
 #images {
