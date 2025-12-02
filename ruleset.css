@@ -52,18 +52,20 @@ html, body {
     cursor:pointer;
 }
 
-#ca-grid {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: auto auto;
-    column-gap: 20px;;
-    padding: 40px;
+#states {
+    margin: 20px 80px 20px 80px;
+}
+/* 
+#listing {
+    margin: 20px;
+} */
+table { 
+    margin: 0px 40px 0px 40px;
+    border-collapse: collapse;
+}
+table td, th{
+    text-align: left;
+    border: 2px solid rgb(115, 28, 178);
+    padding: 10px;
 }
 
-#ca-grid img {
-    width: 100%;
-    border: 2px dashed rgb(115, 28, 178);
-}
-#ca-grid > * {
-    padding: 20px;
-}

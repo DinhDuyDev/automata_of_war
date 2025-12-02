@@ -17,8 +17,8 @@
         <p><a href="index.html">Home</a></p>
         <p><a href="cellular.html">Cellular Automata</a></p>
         <p><a style="text-decoration: underline;">History and Prerequisites</a></p>
-        <p><a href="">Ruleset & Transition Function</a></p>
-        <p><a href="">Interesting Behaviors</a></p>
+        <p><a href="ruleset.html">Ruleset & Transition Function</a></p>
+        <p><a href="interesting.html">Interesting Behaviors</a></p>
         <p><a href="build/web/index.html" target="_blank">Simulation</a></p>
     </div>
 
@@ -49,21 +49,11 @@
             Not only that, between two factions, there needs to be a source for which an invading army comes from. 
             In the case of Fig. 3.1., the 3 army groups North, South and Center are deployed from various territories, such as Lithuania, East Poland, and Romania. 
             These locations will be called the “capitals” in my simulation, which provides a starting point for the armies.
+            
+            <br><br>
+            In hindsight, my simulation was like one of those history videos that showed the expanding armies in 2 opposite colors, and they consistently push
+            back and forth in order to make advances towards the enemy bases and capital city. It was similar in a sense that I colored each cells differently.
         </p>
     </div>
-
-    <p id="states">
-        <strong>States of the Automata</strong><br>
-        In creating cellular automata for our simulation, I had to define a set of states and the transition function.
-        The simulation must also be able to distinguish between different factions. 
-        These are the states I proposed for cells, as derived from the example of the Eastern Front:
-        <!-- <div id="listing"> -->
-            &emsp;&emsp;Terrain: This state is fixed under every circumstance, representing the geometry of the war which will not change throughout the course of the simulation. <br>
-            &emsp;&emsp;Unoccupied: This state represents any territory that hasn’t been occupied, or has been cut-off. This state is the default for cells. <br>
-            &emsp;&emsp;Capital: This is the initial state for any cell designated to generate and expand an invading force. <br>
-            &emsp;&emsp;Supply: This state is set for cells which are bridges between capital cells and frontline cells. Supply cells would be generated from frontline cells that are already behind the frontline, simulating a “reinforcement” of the frontline. <br>
-            &emsp;&emsp;Frontline: This is the state that will be assigned for outermost cells of the “advancing force.” <br>
-        <!-- </div> -->
-    </p>
 </body>
 </html>

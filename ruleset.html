@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Automata Of War</title>
+    <link rel="icon" type="image/x-icon" href="build/web/cell.png">
+    <link rel="stylesheet" href="ruleset.css">
+
+</head>
+<body>
+    <p id="author">Duy Nguyen | <a href="mailto:duydnguyen@umass.edu" id="email">Email: duydnguyen@umass.edu</a> | UMass Amherst</p>
+    <h1 id="title-head">
+        Automata Of War
+    </h1>
+
+    <div id="menu">
+        <p><a href="index.html">Home</a></p>
+        <p><a href="cellular.html">Cellular Automata</a></p>
+        <p><a href="history.html">History and Prerequisites</a></p>
+        <p><a style="text-decoration: underline;">Ruleset & Transition Function</a></p>
+        <p><a href="interesting.html">Interesting Behaviors</a></p>
+        <p><a href="build/web/index.html" target="_blank">Simulation</a></p>
+    </div>
+
+    <p id="states">
+        <strong>States of the Automata</strong><br>
+        In creating cellular automata for our simulation, I had to define a set of states and the transition function.
+        The simulation must also be able to distinguish between different factions. 
+        These are the states I proposed for cells, as derived from the example of the Eastern Front:
+
+        <table>
+            <thead>
+                <th>State name</th>
+                <th>State properties</th>
+                <th>Representation in simulation</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Terrain</td>
+                    <td> This state is fixed under every circumstance, representing the geometry of the war which will not change throughout the course of the simulation. </td>
+                    <td><img src="cell_t.png" alt="Terrain cells"></td>
+                </tr>
+                <tr>
+                    <td>Unoccupied</td>
+                    <td>This state represents any territory that hasn't been occupied, or has been cut-off. This state is the default for cells. </td>
+                    <td><img src="cell_u.png" alt="Unoccupied cells"></td>
+                </tr>
+                <tr>
+                    <td>Capital</td>
+                    <td>This is the initial state for any cell designated to generate and expand an invading force. </td>
+                    <td><img src="cell_c.png" alt="Capital cells"></td>
+                </tr>
+                <tr>
+                    <td>Supply</td>
+                    <td>Supply: This state is set for cells which are bridges between capital cells and frontline cells. 
+                        Supply cells would be generated from frontline cells that are already behind the frontline, simulating a “reinforcement” of the frontline. </td>
+                    <td><img src="cell_xs.png" alt="X Supply cells">
+                        <img src="cell_os.png" alt="O Supply cells">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Frontline</td>
+                    <td>This is the state that will be assigned for outermost cells of the “advancing force.” </td>
+                    <td><img src="cell_f.png" alt="Frontline cells"></td>
+                </tr>
+            </tbody>
+        </table>
+    </p>
+    <br>
+    <p id="states">
+        <strong>Transition Function</strong><br>
+        From here, I will define some simple transition function to give the growing cluster of cells the semblance of an army expanding its territory:     
+        <table>
+            <thead>
+                <th>Cell target</th>
+                <th>Function</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Capital</td>
+                    <td> If one or more neighbors is a frontline cell, and those neighbors are of the opposite faction, 
+                        then the cell becomes unoccupied and factionless. </td>
+                </tr>
+                <tr>
+                    <td>Unoccupied</td>
+                    <td> if two or more neighbors is a capital cell, then the cell becomes a frontline cell. 
+                        This also happens if one or more neighbors is a frontline cell. </td>
+                </tr>
+                <tr>
+                    <td>Supply</td>
+                    <td> if more than one neighbor is a frontline cell, and that neighboring cell is an enemy, then the cell becomes unoccupied and factionless. 
+                        This also happens if there is one or less neighboring supply cell. </td>
+                </tr>
+                <tr>
+                    <td>Frontline</td>
+                    <td> if more than 3 neighbors are frontline cells, and there are no enemy cells, then the cell becomes a supply cell. 
+                        If there is no neighboring supply cell, then the cell becomes unoccupied and factionless. </td>
+                </tr>
+            </tbody>
+        </table>
+    </p>
+</body>
+</html>

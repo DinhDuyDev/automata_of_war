@@ -4,6 +4,10 @@ html, body {
     font-family:'Courier New', Courier, monospace;
 }
 
+#email:hover {
+    color: red;
+}
+
 #author {
     margin: 0;
     padding: 20px;
@@ -72,11 +76,3 @@ html, body {
     font-size: 15px;
     text-align: center;
 }
-
-#states {
-    margin: 80px;
-}
-/* 
-#listing {
-    margin: 20px;
-} */
