@@ -1,0 +1,82 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family:'Courier New', Courier, monospace;
+}
+
+#author {
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    color: rgb(115, 28, 178);
+}
+
+#summary {
+    margin: 40px;
+    text-align: center;
+}
+
+#title-head {
+    margin: 0;
+    text-align: center;
+    padding: 10px;
+    font-weight: 200;
+    line-height: 100%;
+    color: rgb(115, 28, 178);
+}
+
+#menu {
+    display: flex;
+    padding: 10px;
+    justify-content:space-around;
+}
+
+#menu p, a{
+    padding: 5px;
+    color: rgb(115, 28, 178);
+    font-size: 15px;
+    text-decoration: none;
+}
+
+#menu p:hover {
+    color: rgb(255, 0, 0);
+    cursor:pointer;
+}
+
+#menu a:hover {
+    color: rgb(255, 0, 0);
+    cursor:pointer;
+}
+
+#main {
+    padding: 40px;
+    margin: 40px
+}
+
+#history {
+    display:grid;
+    grid-template-columns: 50% 50%;
+    margin: 40px;
+}
+
+#history p{
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+#fig-im img {
+    width: 100%;
+    border: 2px dashed rgb(115, 28, 178);
+}
+#fig-im figcaption {
+    font-size: 15px;
+    text-align: center;
+}
+
+#states {
+    margin: 80px;
+}
+/* 
+#listing {
+    margin: 20px;
+} */

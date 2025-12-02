@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Automata Of War</title>
+    <link rel="icon" type="image/x-icon" href="build/web/cell.png">
+    <link rel="stylesheet" href="history.css">
+
+</head>
+<body>
+    <p id="author">Duy Nguyen | <a href="mailto:duydnguyen@umass.edu" id="email">Email: duydnguyen@umass.edu</a> | UMass Amherst</p>
+    <h1 id="title-head">
+        Automata Of War
+    </h1>
+
+    <div id="menu">
+        <p><a href="index.html">Home</a></p>
+        <p><a href="cellular.html">Cellular Automata</a></p>
+        <p><a style="text-decoration: underline;">History and Prerequisites</a></p>
+        <p><a href="">Ruleset & Transition Function</a></p>
+        <p><a href="">Interesting Behaviors</a></p>
+        <p><a href="build/web/index.html" target="_blank">Simulation</a></p>
+    </div>
+
+    <p id="main">
+            <strong>History</strong><br><br>
+            In simulating a war-like environment, I had to find inspiration through that of a real life event.
+            To do this, I used the example of the Eastern Front's Operation Barbarossa, Hitler's incursion into
+            the Soviet Union. It was an extreme effort by Germany to take out the Soviet Union and win the war.
+            The German army and the Soviet Union clashed along the frontlines, desperately trying to gain an advantage.
+            Though I tried to simulate an army's advance and subsequently, the enemy's retreat. Unfortunately, 
+            due to a lack of strength bias I wasn't able to simulate this in time, as a result of a lack of strength
+            points / biases.
+    </p>
+
+    <div id="history">
+        <figure id="fig-im">
+            <img src="russianfront.webp" alt="Image of Operation Barbarossa">
+            <br>
+            <figcaption><strong>Fig. 3.1.</strong> “military operations on the Eastern Front, 1941-45.” Encyclopædia Britannica, Inc, n.d.,
+                https://cdn.britannica.com/94/217094-050-CB55786B/Russian-Front-Soviety-Counter-Offensive-1942-1945.jpg.
+            </figcaption>
+        </figure>
+        <p>
+            Operation Barbarossa started on the Eastern Front in June 1941, bringing swathes of Soviet land into German control until August 1941. 
+            In Fig. 3.1., on the right section, German territories are represented on the left of the spiked line, and Soviet territories are represented on the right. 
+            Not only that, Fig. 3.1., presents the frontline as the black line with spikes between the two colors. This is where the two “factions” will confront each other. 
+            In my simulation, behind the frontline are supplies, which will nourish the frontline and prevent it from collapsing. 
+            Not only that, between two factions, there needs to be a source for which an invading army comes from. 
+            In the case of Fig. 3.1., the 3 army groups North, South and Center are deployed from various territories, such as Lithuania, East Poland, and Romania. 
+            These locations will be called the “capitals” in my simulation, which provides a starting point for the armies.
+        </p>
+    </div>
+
+    <p id="states">
+        <strong>States of the Automata</strong><br>
+        In creating cellular automata for our simulation, I had to define a set of states and the transition function.
+        The simulation must also be able to distinguish between different factions. 
+        These are the states I proposed for cells, as derived from the example of the Eastern Front:
+        <!-- <div id="listing"> -->
+            &emsp;&emsp;Terrain: This state is fixed under every circumstance, representing the geometry of the war which will not change throughout the course of the simulation. <br>
+            &emsp;&emsp;Unoccupied: This state represents any territory that hasn’t been occupied, or has been cut-off. This state is the default for cells. <br>
+            &emsp;&emsp;Capital: This is the initial state for any cell designated to generate and expand an invading force. <br>
+            &emsp;&emsp;Supply: This state is set for cells which are bridges between capital cells and frontline cells. Supply cells would be generated from frontline cells that are already behind the frontline, simulating a “reinforcement” of the frontline. <br>
+            &emsp;&emsp;Frontline: This is the state that will be assigned for outermost cells of the “advancing force.” <br>
+        <!-- </div> -->
+    </p>
+</body>
+</html>
