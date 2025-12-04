@@ -38,30 +38,40 @@
                 <tr>
                     <td>Terrain</td>
                     <td> This state is fixed under every circumstance, representing the geometry of the war which will not change throughout the course of the simulation. </td>
-                    <td><img src="cell_t.png" alt="Terrain cells"></td>
+                    <td><img src="cell_t.png" alt="Terrain cells">
+                        <figcaption>Fig. 4.1. Terrain cells denoted by gray squares</figcaption>
+                    </td>
                 </tr>
                 <tr>
                     <td>Unoccupied</td>
                     <td>This state represents any territory that hasn't been occupied, or has been cut-off. This state is the default for cells. </td>
-                    <td><img src="cell_u.png" alt="Unoccupied cells"></td>
+                    <td><img src="cell_u.png" alt="Unoccupied cells">
+                    <figcaption>Fig. 4.2. Empty cells denoting unoccupied cells</figcaption>
+                    </td>
                 </tr>
                 <tr>
                     <td>Capital</td>
                     <td>This is the initial state for any cell designated to generate and expand an invading force. </td>
-                    <td><img src="cell_c.png" alt="Capital cells"></td>
+                    <td><img src="cell_c.png" alt="Capital cells">
+                    <figcaption>Fig. 4.3. Terrain cells denoted by gray squares</figcaption>
+                    </td>
                 </tr>
                 <tr>
                     <td>Supply</td>
                     <td>Supply: This state is set for cells which are bridges between capital cells and frontline cells. 
                         Supply cells would be generated from frontline cells that are already behind the frontline, simulating a “reinforcement” of the frontline. </td>
                     <td><img src="cell_xs.png" alt="X Supply cells">
+                        <figcaption>Fig. 4.4a. X supply cells denoted by red</figcaption>
                         <img src="cell_os.png" alt="O Supply cells">
+                        <figcaption>Fig. 4.4b. O supply cells denoted by red</figcaption>
                     </td>
                 </tr>
                 <tr>
                     <td>Frontline</td>
                     <td>This is the state that will be assigned for outermost cells of the “advancing force.” </td>
-                    <td><img src="cell_f.png" alt="Frontline cells"></td>
+                    <td><img src="cell_f.png" alt="Frontline cells">
+                    <figcaption>Fig. 4.5. Frontline cells (X and O) denoted by yellow.</figcaption>
+                    </td>
                 </tr>
             </tbody>
         </table>

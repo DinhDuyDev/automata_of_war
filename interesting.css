@@ -53,5 +53,19 @@ html, body {
 }
 
 #small-interesting-behaviors {
+    margin: 40px;
+}
 
+table { 
+    margin: 0px 40px 0px 40px;
+    border-collapse: collapse;
+}
+table td, th{
+    text-align: left;
+    border: 2px solid rgb(115, 28, 178);
+    padding: 10px;
+}
+
+table td img {
+    width: 75%;
 }

@@ -3,6 +3,8 @@ import game_matrix as g
 from pygame.locals import *
 import settings
 import asyncio
+import os
+
 pygame.init()
 pygame.font.init()
 screen = pygame.display.set_mode((settings.WINDOW_WIDTH, settings.WINDOW_HEIGHT), HWSURFACE | DOUBLEBUF | RESIZABLE)
@@ -31,7 +33,6 @@ async def main():
 
     while running:
         mx, my = mouse_translate()
-
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -71,9 +72,12 @@ async def main():
                     g.game_matrix[yy][xx].set_faction("None")
 
         if sim_running:
-            clock_fps = 5
+            clock_fps = 10
             g.sim()
-            generation += 1
+            # pyautogui.screenshot(f"all_screenshots/scout{generation}.png")
+            if pygame.key.get_pressed()[pygame.K_s]:
+                os.system(f"screencapture all_screenshots/zone_of_conflict{generation}.png")
+                generation += 1
         else:
             clock_fps = 60
 

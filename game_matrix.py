@@ -16,7 +16,7 @@ game_matrix:list[list[Cell.Cell]] = [[Cell.Cell(i, j, "UNOCCUPIED") for i in ran
 state_colors = {
     "UNOCCUPIED" : (0, 0, 0),
     "TERRAIN": (128, 128, 128),
-    "CAPITAL": (0, 255, 0),#(115, 28, 178),
+    "CAPITAL": (115, 28, 178),
     "SUPPLY": (255, 75, 75),
     "COMBATANT": (255, 206, 27)
 }
