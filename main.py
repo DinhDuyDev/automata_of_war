@@ -76,8 +76,9 @@ async def main():
             g.sim()
             # pyautogui.screenshot(f"all_screenshots/scout{generation}.png")
             if pygame.key.get_pressed()[pygame.K_s]:
-                os.system(f"screencapture all_screenshots/zone_of_conflict{generation}.png")
+                os.system(f"screencapture all_screenshots/complete_stalemate{generation}.png")
                 generation += 1
+                clock_fps = 5
         else:
             clock_fps = 60
 

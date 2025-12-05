@@ -21,7 +21,7 @@
         <p><a href="build/web/index.html" target="_blank">Simulation</a></p>
     </div>
 
-    <p id="small-interesting-behaviors">
+    <p class="small-interesting-behaviors">
         <strong>Interesting Behaviors</strong>
         <br>
         There are some interesting behaviors that happened due to the transition function I devised for each state and for each situation.
@@ -40,7 +40,7 @@
                         from the rest of the armies, and are unwilling to cooperate to actually form soemthing that looks strong.
                     </td>
                     <td><img src="all_gifs/scout_cells.gif" alt="Scout cells">
-                    <figcaption>Fig. 5.1. Scout cells' formation.</figcaption></td>
+                    <figcaption><strong>Fig. 5.1.</strong> Scout cells' formation.</figcaption></td>
                     </td>
                 </tr>
                 <tr>
@@ -49,7 +49,7 @@
                         simulating a war in which both sides are evenly matched, leading to a No Man's Land situation where no army can cross.
                     </td>
                     <td><img src="all_gifs/nomanslandstrip.png" alt="No Man's Land cells">
-                    <figcaption>Fig. 5.2. A No Man's Land strip in the middle of the frontier.</figcaption></td>
+                    <figcaption><strong>Fig. 5.2.</strong> A No Man's Land strip in the middle of the frontier.</figcaption></td>
                 </tr>
                 <tr>
                     <td>Points of Skirmish</td>
@@ -60,7 +60,44 @@
                         would be a war.
                     </td>
                     <td><img src="all_gifs/conflict_zone.gif" alt="Skirmish cells">
-                    <figcaption>Fig. 5.3. A No Man's Land strip in the middle of the frontier.</figcaption></td>
+                    <figcaption><strong>Fig. 5.3.</strong> A No Man's Land strip in the middle of the frontier.</figcaption></td>
+                </tr>
+            </tbody>
+        </table>
+    </p>
+
+    <p class="interesting">
+        <strong>Interesting Scenarios</strong>
+        <br>
+        Combined with the interesting behaviors above, the automata was able to create a bunch of interesting scenarios that can be categorized.
+        <table>
+            <thead>
+                <th>Scenario Name</th>
+                <th>Scenario Description</th>
+                <th>Representation in simulation</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Panicked Mobilization</td>
+                    <td> Due to X's failure in allocating resources in time, a majority of X's cells run off to become factionless. 
+                        O's cells convert the factionless cells and form a supply cluster on X's side, leading to them 
+                        forming an actual front against them. X fails to protect themselves from O due to their weaker
+                        scout cells not being a match against the stronger O front. They lose a majority of their territory and capital cells.
+                    </td>
+                    <td><img src="all_gifs/haste_mobilization.gif" alt="X Cells panickedly mobilizing">
+                    <figcaption><strong>Fig. 6.1.</strong> Panicked Mobilization. 
+                    </figcaption></td>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Complete Stalemate</td>
+                    <td> In this case, both factions were able to generate sufficient 
+                    </td>
+                    <td><img src="all_gifs/haste_mobilization.gif" alt="X Cells panickedly mobilizing">
+                    <figcaption><strong>Fig. 6.1.</strong> Panicked Mobilization. 
+                    </figcaption></td>
+                    </td>
                 </tr>
             </tbody>
         </table>

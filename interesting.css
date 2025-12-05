@@ -52,7 +52,7 @@ html, body {
     cursor:pointer;
 }
 
-#small-interesting-behaviors {
+.interesting {
     margin: 40px;
 }
 
