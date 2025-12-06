@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Automata Of War</title>
+    <link rel="icon" type="image/x-icon" href="build/web/cell.png">
+    <link rel="stylesheet" href="sim_intro.css">
+
+</head>
+<body>
+    <p id="author">Duy Nguyen | <a href="mailto:duydnguyen@umass.edu" id="email">Email: duydnguyen@umass.edu</a> | UMass Amherst</p>
+    <h1 id="title-head">
+        Automata Of War
+    </h1>
+
+    <div id="menu">
+        <p><a href="index.html">Home</a></p>
+        <p><a href="cellular.html">Cellular Automata</a></p>
+        <p><a href="history.html">History and Prerequisites</a></p>
+        <p><a href="ruleset.html">Ruleset & Transition Function</a></p>
+        <p><a href="interesting.html">Interesting Behaviors</a></p>
+        <p><a style="text-decoration: underline;">Simulation</a></p>
+    </div>
+    
+    <div id="main-content">
+        <p>        
+            <strong> Hi there! </strong> <br>
+            This is what you've probably been looking forward to seeing.
+            This simulation was programmed using Python, and made using a graphics library called PyGame.
+            To save you the gritty details of what that all is, it allows me to draw graphics onto a screen,
+            essentially making it a very nice game engine for me to work with.
+            For the simulation, I made a 2D matrix of all the cells visible on the screen. For each of those 
+            cells, I assigned them the states that I created. 
+            After doing this, I created a discrete integer variable that would increase by 1 for every 10 frames.
+            Each increase will activate the transition function that will determine the state each cell would change
+            to based on the current states of the neigbors. Note that this process is SIMULTANEOUS. The neighbors 
+            don't mutate straight away, instead they wait after the last cell's next state has been determined.
+            This is the basis of how Conway's Game of Life works too.
+        </p>
+        <br><br>
+        <p id="btn"><a href="build/web/index.html" target="_blank">CLICK HERE FOR THE SIMULATION</a></p>
+    </div>
+</body>
+</html>

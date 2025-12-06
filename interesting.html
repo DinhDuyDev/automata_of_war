@@ -18,7 +18,7 @@
         <p><a href="history.html">History and Prerequisites</a></p>
         <p><a href="ruleset.html">Ruleset & Transition Function</a></p>
         <p><a style="text-decoration: underline;">Interesting Behaviors</a></p>
-        <p><a href="build/web/index.html" target="_blank">Simulation</a></p>
+        <p><a href="simulation_introduction.html">Simulation</a></p>
     </div>
 
     <p class="interesting">
@@ -82,10 +82,11 @@
                     <td> Due to X's failure in allocating resources in time, a majority of X's cells run off to become factionless. 
                         O's cells convert the factionless cells and form a supply cluster on X's side, leading to them 
                         forming an actual front against them. X fails to protect themselves from O due to their weaker
-                        scout cells not being a match against the stronger O front. They lose a majority of their territory and capital cells.
+                        scout cells not being a match against the stronger O front. They lose a majority of their territory and capital cells, but were still able to 
+                        sustain themselves.
                     </td>
-                    <td><img src="all_gifs/haste_mobilization.gif" alt="X Cells panickedly mobilizing">
-                    <figcaption><strong>Fig. 6.1.</strong> Panicked Mobilization. 
+                    <td><img src="all_gifs/last_ditch_resistance.gif" alt="X Capital Cells form a last ditch frontline right on death's door">
+                    <figcaption><strong>Fig. 6.1.</strong> Last Ditch Resistance. 
                     </figcaption></td>
                     </td>
                 </tr>
@@ -96,8 +97,55 @@
                         As they clash, they form a firm borderline, and any zones of skirmish is quickly settled instead of being 
                         drawn out. Another name for this scenario is <strong>"Peace for Their Time."</strong>
                     </td>
-                    <td><img src="all_gifs/complete_stalemate.gif" alt="X Cells panickedly mobilizing">
-                    <figcaption><strong>Fig. 6.2.</strong> Panicked Mobilization. 
+                    <td><img src="all_gifs/complete_stalemate.gif" alt="X and O unable to advance.">
+                    <figcaption><strong>Fig. 6.2.</strong> Complete Stalemate. 
+                    </figcaption></td>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Panicked Mobilization</td>
+                    <td> This situation presents one army as having only scouts and one army with a fully developed frontline.
+                        When these armies meet, the army with only scouts lose a bit of their ground, but they eventually hold.
+                        After securing the frontline, they successfully create a sustainable and strong army behind it.
+                    </td>
+                    <td><img src="all_gifs/hasted_mobilization.gif" alt="X Cells panickedly mobilizing.">
+                    <figcaption><strong>Fig. 6.3.</strong> Panicked Mobilization. 
+                    </figcaption></td>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Life Loving Scout Army</td>
+                    <td> Interestingly, the automata can also give rise to extremely deviant situations. 
+                        One of them, which I call “Life-Loving Scout Army”, 
+                        details an alternating horizontal pattern of frontier cells without any supply cells forming. 
+                        This pattern was formed from an expanding X frontier. 
+                        This frontier broke down, forming factionless rogue frontier cells. 
+                        The rogue cells collided with the O capital cluster that previously failed to produce a frontier, 
+                        leading to the rogue cells switching to the O faction, converting a portion of the X faction into O cells. 
+                        However, these cells still do not fight or form a stalemate. 
+                        They simply keep oscillating between their different positions. 
+                        There is a variation of this situation, which I called the Great Wall of China.
+                    </td>
+                    <td><img src="all_gifs/life_loving_scout.gif" alt="X Cells not fighting.">
+                    <figcaption><strong>Fig. 6.4.</strong> Life Loving Scout Army. 
+                    </figcaption></td>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>The Great Wall of China</td>
+                    <td> 
+                        Finally, another situation that can be categorized as “extremely deviant” would be the “Great Wall of China”. 
+                        This happens when two capital clusters form a line, spanning from the top to the bottom of the simulation grid. 
+                        The configuration was so unique that faction X formed a downward-moving scout column. 
+                        However, the simulation stops mutating after X’s scout cells hit O’s capital cluster. 
+                        This collision creates a layer of frontier cells for O, seemingly protecting it from X’s frontier cells. 
+                        From then, the scout cells alternate between the unoccupied cells.
+                    </td>
+                    <td><img src="all_gifs/great_wall_of_china.png" alt="X Cells not fighting.">
+                    <figcaption><strong>Fig. 6.5.</strong> The Great Wall of China. Due to technical constraints I cannot recreate the Great Wall's original configuration.
                     </figcaption></td>
                     </td>
                 </tr>
