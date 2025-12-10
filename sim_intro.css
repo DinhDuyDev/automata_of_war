@@ -55,20 +55,29 @@ html, body {
 #main-content {
     padding: 40px;
 }
-
+#main-content figure > img{
+    width: 100%;
+}
+#main-content strong,a{
+    padding: 0;
+    margin: 0;
+}
 #btn {
-    padding: 12px;
+    /* padding: 12px; */
     text-align: center;
-    color: white;
-    background-color: rgb(115, 28, 178);
+    border: 2px dashed rgb(115, 28, 178);
+    background-color: white;
     width: 10%;
-    margin:auto;
+    margin: auto;
 }
 
 #btn:hover {
     background-color: red;
 }
-#btn a {
+#btn:hover a {
     color: white;
+}
+#btn a {
+    color: rgb(115, 28, 178);
     font-weight: 600;
 }

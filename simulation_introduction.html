@@ -21,26 +21,32 @@
         <p><a href="interesting.html">Interesting Behaviors</a></p>
         <p><a style="text-decoration: underline;">Simulation</a></p>
     </div>
-    
     <div id="main-content">
-        <p>        
-            <strong> Hi there! </strong> <br>
-            This is what you've probably been looking forward to seeing.
-            This simulation was programmed using Python, and made using a graphics library called PyGame.
+        <p>
+            <strong>The Simulation</strong><br><br>
+            This simulation was programmed using Python, and made using a graphics/game library called PyGame.
             To save you the gritty details of what that all is, it allows me to draw graphics onto a screen,
-            essentially making it a very nice game engine for me to work with.
+            essentially making it a very nice drawing tool for me to work with.
             For the simulation, I made a 2D matrix of all the cells visible on the screen. For each of those 
             cells, I assigned them the states that I created. 
+            <br>
             After doing this, I created a discrete integer variable that would increase by 1 for every 10 frames.
             Each increase will activate the transition function that will determine the state each cell would change
             to based on the current states of the neigbors. Note that this process is SIMULTANEOUS. The neighbors 
             don't mutate straight away, instead they wait after the last cell's next state has been determined.
             This is the basis of how Conway's Game of Life works too.
             <br><br>
+            In drawing the cells, I just use PyGame's rectangle drawing function and use the colors for each
             If you'd like, you can check out the source code here: <a href="https://github.com/DinhDuyDev/automata_of_war" style="text-decoration: underline;"  target="_blank">Source Code</a>
         </p>
         <br><br>
         <p id="btn"><a href="build/web/index.html" target="_blank">CLICK HERE FOR THE SIMULATION</a></p>
+        <br><br>
+        <figure>
+            <img src="all_gifs/source_code.png" alt="Image of the source code">
+            <figcaption><strong>Fig 7.1.</strong> Source code snippet. Below is the transition function (or the local rule) that I created. The 
+            colors for the different cells are defined as RGB (Red, Green, Blue) values.</figcaption>
+        </figure>
     </div>
 </body>
 </html>
